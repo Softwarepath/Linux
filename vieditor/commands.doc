@@ -1,4 +1,6 @@
+===================
 VI Editing commands
+===================
 i – Insert at cursor (goes into insert mode)
 a – Write after cursor (goes into insert mode)
 A – Write at the end of line (goes into insert mode)
@@ -18,3 +20,88 @@ r – Replace character
 R – Overwrite characters from cursor onward
 s – Substitute one character under cursor continue to insert
 S – Substitute entire line and begin to insert at the beginning of the line
+
+==========================================================
+Setting parameters (After this command need to give enter)
+==========================================================
+":set number
+or 
+:set nu"	            Show line numbers
+------------------------------------------------------
+":set nonumber
+or
+:set nonu"	          Don’t show line numbers
+------------------------------------------------------
+":set autoindent
+or
+:set ai "	           "Indent after carriage return (whlile giving enter, next line will start after the space which current line having)"
+------------------------------------------------------
+:set noautoindent
+or
+:set noai"	          noautoindent Turn off autoindent
+------------------------------------------------------
+:set showmode	        Display mode on last line of screen (mode example : Visual, Insert)
+:set noshowmode	      Turn off showmode
+:set all	            show all the options available for set command
+
+
+====================================================
+Cursor Navigation commands (No need to give enter )	
+====================================================
+	                   H	                   First line left corner of screen
+                     M	                   Middle line of the screen
+                     L	                   Last line left corner of screen
+                     gg	                   Starting line of file (home)
+                     G	                   Ending line of file
+--------------------------------------------------------------------
+                :<number>	                 cursor go to given line number (example  :3, :8, :113)                  
+                   or                                 or
+                 <number>G                 3G,  8G,  113G
+--------------------------------------------------------------------                                                              
+	                  h	                     cursor move to one character backward
+                    j	                     Down a line
+                    k	                     Up a line
+                    l(small L)	           cursor move to one character backward
+                    ^	                     Beginning of line
+                    $	                     End of line
+                    w	                     One word forward
+                    b	                     Back one word
+                    
+
+==========================================
+Search commands (No need to give enter )	
+===========================================
+                  /<search text>            Search given text (example /hello   ,    /about). This need s enter command
+                  n                         go to next match if we search any thing previously
+                  N                         go to pervious match if we search any thing previously
+                  
+                  *                         search the word where cursor currently exist(place the cursor at one of the word in file
+                                            and press * then it will search that word)
+                                            
+                  f<character>              search  single character in current line
+                  ;                         go to next match of searched character
+                  
+==========================================================   
+Replace commands (After this command need to give enter)	
+==========================================================                                                
+:[area]s/old_text/new_text/ 	              Search the first occurrence of old_text in selected area and replace with new_text 
+:[area]s/old_text//n	                      Count the first occurrence of old_text in selected area
+:[area]s/old_text/new_text/g	              Search all occurrences of old_text  in selected area and replace with new_text 
+:[area]s/old_text//gn	                      Count all occurrences of old_text  in selected area
+      ---------------------------------------------------------------------------------------------------------
+         [area] have multiple options. In above command we need to provide below options at the place of [area]	
+      ---------------------------------------------------------------------------------------------------------
+                .	                          Current line
+                n	                          Line number n
+                .+m	                        Current line plus m lines
+                /string/	                  A line that contains "string"
+                %	                          Any line
+                p,q	                        range from p line to q line
+      ---------------------------------------------------------------------------------------------------------
+         [area] options ended here	
+      ---------------------------------------------------------------------------------------------------------                                   
+
+:%s/^/H/ 	                                  adds H to start of each line
+:%s/^./H/ 	                                Replaces first character of each line to H
+:%s/$/H/                                  	adds H to end of each line
+:%s/.$/H/                                  	Replaces last character of each line to H
