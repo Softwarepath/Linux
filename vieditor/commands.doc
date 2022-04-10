@@ -26,7 +26,7 @@ Setting parameters (After this command need to give enter)
 ==========================================================
 ":set number
 or 
-:set nu"	            Show line numbers
+:set nu"	          Show line numbers
 ------------------------------------------------------
 ":set nonumber
 or
@@ -34,34 +34,35 @@ or
 ------------------------------------------------------
 ":set autoindent
 or
-:set ai "	           "Indent after carriage return (whlile giving enter, next line will start after the space which current line having)"
+:set ai "	          Indent after carriage return
+                          (whlile giving enter, next line will start after the space which current line having)
 ------------------------------------------------------
 :set noautoindent
 or
 :set noai"	          noautoindent Turn off autoindent
 ------------------------------------------------------
-:set showmode	        Display mode on last line of screen (mode example : Visual, Insert)
-:set noshowmode	      Turn off showmode
-:set all	            show all the options available for set command
+:set showmode	          Display mode on last line of screen (mode example : Visual, Insert)
+:set noshowmode	          Turn off showmode
+:set all	          show all the options available for set command
 
 
 ====================================================
 Cursor Navigation commands (No need to give enter )	
 ====================================================
-	                   H	                   First line left corner of screen
+	             H	                   First line left corner of screen
                      M	                   Middle line of the screen
                      L	                   Last line left corner of screen
                      gg	                   Starting line of file (home)
                      G	                   Ending line of file
 --------------------------------------------------------------------
-                :<number>	                 cursor go to given line number (example  :3, :8, :113)                  
+                :<number>	           cursor go to given line number (example  :3, :8, :113)                  
                    or                                 or
                  <number>G                 3G,  8G,  113G
 --------------------------------------------------------------------                                                              
-	                  h	                     cursor move to one character backward
+	            h	                     cursor move to one character backward
                     j	                     Down a line
                     k	                     Up a line
-                    l(small L)	           cursor move to one character backward
+                    l(small L)	             cursor move to one character backward
                     ^	                     Beginning of line
                     $	                     End of line
                     w	                     One word forward
@@ -93,15 +94,15 @@ Replace commands (After this command need to give enter)
       ---------------------------------------------------------------------------------------------------------
                 .	                          Current line
                 n	                          Line number n
-                .+m	                        Current line plus m lines
+                .+m	                          Current line plus m lines
                 /string/	                  A line that contains "string"
                 %	                          Any line
-                p,q	                        range from p line to q line
+                p,q	                          range from p line to q line
       ---------------------------------------------------------------------------------------------------------
          [area] options ended here	
       ---------------------------------------------------------------------------------------------------------                                   
 
-:%s/^/H/ 	                                  adds H to start of each line
+:%s/^/H/ 	                                adds H to start of each line
 :%s/^./H/ 	                                Replaces first character of each line to H
 :%s/$/H/                                  	adds H to end of each line
 :%s/.$/H/                                  	Replaces last character of each line to H
