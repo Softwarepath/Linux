@@ -106,3 +106,24 @@ Replace commands (After this command need to give enter)
 :%s/^./H/ 	                                Replaces first character of each line to H
 :%s/$/H/                                  	adds H to end of each line
 :%s/.$/H/                                  	Replaces last character of each line to H
+
+
+==================================================
+Open file from another opened file in Vi editor
+==================================================
+:e <file name>					Open given file
+:e#						switch between two files
+
+=========================================
+Moving lines in Vi editor using commands
+=========================================
+:<range>m <target line number>			move given range lines to after target line
+
+==============
+Usage of Marks
+==============
+m<mark name> 					register mark at current cursor position
+'<mark name>					goto mark row
+`<mark name>					goto mark row and column
+:marks						disply all registered marks
+
